@@ -13,7 +13,12 @@ return new class extends Migration
     {
         Schema::create('vuelos', function (Blueprint $table) {
             $table->id();
-            $table -> string("destino");         
+            $table ->string("ciudad_partida")->nullable();
+            $table -> string("ciudad_destino");
+            $table -> string("fecha") -> nullable();
+            $table -> integer("capacidad_pasajeros");
+            $table -> integer("cupos_disponibles");
+            $table -> text("picture");
             $table->timestamps();
         });
     }

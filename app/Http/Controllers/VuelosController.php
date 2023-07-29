@@ -13,8 +13,7 @@ class VuelosController extends Controller
     public function index()
     {
        // Obtener los datos de la base de datos
-       $datos = Vuelos::all(); // Reemplaza "MiModelo" con el nombre de tu modelo de base de datos
-
+       $datos = Vuelos::all();
        // Devolver los datos en formato JSON
        return response()->json($datos);
     }
