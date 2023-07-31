@@ -1,15 +1,28 @@
-import "../css/cards.css"
+import "../css/cards.css";
+import { useState, useEffect } from "react";
 
-export default function FlightCard({src_img, partida, destino, fecha, hora_partida, hora_llegada, cupos}) {
-  return (
-    <div>
-        <img src={src_img}/>
-        <p>Fecha: {fecha}</p>
-        <p>Cupos: {cupos}</p>
-        <p>Ciudad de destino: {destino}</p>
-        <p>Ciudad de partida: {partida}</p>
-        <p>Hora de partida: {hora_partida}</p>
-        <p>Hora de llegada: {hora_llegada}</p>
-    </div>
-  )
+export default function FlightCard() {
+    const [flights, setFlights] = useState([]);
+
+    useEffect(() => {
+        fetch()
+            .then((response) => response.json)
+            .then((data) => setFlights(data))
+            .catch((error) => console.error(error));
+    }, []);
+
+    return (
+        <>
+            {flights.map((flight) => (
+                <div key={flight.id}>
+                    <img src={flight.picture} />
+                    <p>Fecha: {flight.fecha}</p>
+                    <p>Cupos: {flight.capacidad_pasajeros}</p>
+                    <p>Cupos disponibles: {flight.cupos_disponibles}</p>
+                    <p>Ciudad de destino: {flight.ciudad_destino}</p>
+                    <p>Ciudad de partida: {flight.ciudad_partida}</p>
+                </div>
+            ))}
+        </>
+    );
 }

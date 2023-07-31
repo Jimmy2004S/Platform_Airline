@@ -8,6 +8,7 @@
 .grid-container{
     margin-top: 1rem;
     gap: 0.5rem;
+    grid-template-columns: repeat(3, 1fr);
     display: grid;
     padding: 1rem;
 }
