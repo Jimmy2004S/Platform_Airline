@@ -18,4 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource("/vuelos" , VuelosController::class);
+Route::get("/vuelos" , [VuelosController::class , "index"] );

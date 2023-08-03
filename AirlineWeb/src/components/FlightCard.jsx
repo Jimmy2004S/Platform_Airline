@@ -5,10 +5,14 @@ export default function FlightCard() {
     const [flights, setFlights] = useState([]);
 
     useEffect(() => {
-        fetch()
-            .then((response) => response.json)
+        fetch("http://127.0.0.1:8000/vuelos" ,{
+            method: 'GET',
+            mode: "cors",
+            credentials: "include"
+            })
+            .then((response) => response.json())
             .then((data) => setFlights(data))
-            .catch((error) => console.error(error));
+            .catch((error) => console.error("Error fecth " , error));
     }, []);
 
     return (
