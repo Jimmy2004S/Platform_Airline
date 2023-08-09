@@ -18,6 +18,7 @@ return new class extends Migration
             $table -> string("fecha") -> nullable();
             $table -> integer("capacidad_pasajeros");
             $table -> integer("cupos_disponibles");
+            $table -> text("picture");
             $table->timestamps();
         });
     }

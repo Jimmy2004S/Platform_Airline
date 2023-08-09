@@ -30,7 +30,8 @@ class VuelosFactory extends Factory
             "ciudad_destino" => $ciudad_destino,
             "ciudad_partida" => $ciudad_partida,
             "capacidad_pasajeros" => rand(15 , 20),
-            "cupos_disponibles" => rand(0 ,20)
+            "cupos_disponibles" => rand(0 ,20),
+            "picture" => "../../public/img/vuelos.jpg"
         ];
     }
 }

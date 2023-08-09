@@ -7,9 +7,7 @@ use Illuminate\Http\Request;
 
 class VuelosController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+
     public function index()
     {
        // Obtener los datos de la base de datos
@@ -18,12 +16,10 @@ class VuelosController extends Controller
        return response()->json($datos);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+
     public function create()
     {
-        //
+        return "hola";
     }
 
     /**
@@ -31,15 +27,13 @@ class VuelosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return $request ->all();
     }
 
-    /**
-     * Display the specified resource.
-     */
+
     public function show(Vuelos $vuelos)
     {
-        //
+        return $vuelos;
     }
 
     /**
@@ -58,11 +52,8 @@ class VuelosController extends Controller
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(Vuelos $vuelos)
     {
-        //
+        return "borro";
     }
 }
