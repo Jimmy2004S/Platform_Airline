@@ -27,19 +27,28 @@ class VuelosController extends Controller
      */
     public function store(Request $request)
     {
-        return $request ->all();
+        $vuelo = new Vuelos();
+
+        $vuelo -> ciudad_partida = $request -> ciudad_partida;
+        $vuelo -> ciudad_destino = $request -> ciudad_destino;
+        $vuelo -> fecha = $request -> fecha;
+        $vuelo -> capacidad_pasajeros = $request -> capacidad_pasajeros;
+        $vuelo -> cupos_disponibles = $request -> cupos_disponibles;
+        $vuelo -> picture = $request -> picture;
+
+        $vuelo -> save();
     }
 
 
-    public function show(Vuelos $vuelos)
+    public function show(Vuelos $vuelo)
     {
-        return $vuelos;
+        return Vuelos::find($vuelo) ->first();
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Vuelos $vuelos)
+    public function edit(Vuelos $vuelo)
     {
         //
     }
@@ -47,13 +56,21 @@ class VuelosController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Vuelos $vuelos)
+    public function update(Request $request, Vuelos $vuelo)
     {
-        //
+        $vuelo -> ciudad_partida = $request -> ciudad_partida;
+        $vuelo -> ciudad_destino = $request -> ciudad_destino;
+        $vuelo -> fecha = $request -> fecha;
+        $vuelo -> capacidad_pasajeros = $request -> capacidad_pasajeros;
+        $vuelo -> cupos_disponibles = $request -> cupos_disponibles;
+        $vuelo -> picture = $request -> picture;
+
+        $vuelo -> save();
     }
 
-    public function destroy(Vuelos $vuelos)
+    public function destroy(Vuelos $vuelo)
     {
-        return "borro";
+        $vuelos = Vuelos::find($vuelo) ->first();
+        $vuelos -> delete();
     }
 }

@@ -15,15 +15,9 @@
     </head>
     <body class="antialiased">
         <a href=" {{ url("vuelos") }}"> Mostrar</a>
-        <a href=" {{ url("vuelos/2") }}"> Mostrar uno</a>
-        <form action="{{ url("vuelos")}}" method="POST">
+        <form action="{{ url("vuelos/22")}}" method="post">
             @csrf
-            <input type="text" name="ciudad_partida">
-            <input type="text" name="ciudad_destino">
-            <input type="text" name="fecha">
-            <input type="text" name="capacidad_pasajeros">
-            <input type="text" name="cupos_disponibles">
-            <input type="text" name="picture">
+            @method("delete")
             <button type="submit"> Enviar</button>
         </form>
     </body>
