@@ -1,3 +1,27 @@
 img{
     width: 30%;
 }
+
+button{
+    border-radius: 0.3rem;
+    padding: 0.3rem;
+    width: 60px;
+}
+
+.btn-delete{
+    background-color: #fff;
+    color: darkred;
+    border: 1px solid;
+    margin: 0.4rem;
+}
+
+.btn-delete:hover{
+    background-color: darkred;
+    color:#fff;
+}
+
+.btn-edit{
+    border: none;
+    background-color: darkgreen;
+    color: #fff;
+}

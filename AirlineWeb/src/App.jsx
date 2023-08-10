@@ -6,8 +6,9 @@ function App() {
     return (
         <>
             <Header />
+            <img src="../../public/icon.jpg" alt="" />
             <div className="grid-container">
-                <FlightCard/>
+                <FlightCard />
             </div>
         </>
     );
