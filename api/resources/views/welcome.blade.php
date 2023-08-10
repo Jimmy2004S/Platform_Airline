@@ -14,8 +14,9 @@
 
     </head>
     <body class="antialiased">
-        <a href=" {{ url("vuelos") }}"> Mostrar</a>
-        <form action="{{ url("vuelos/22")}}" method="post">
+        <a href=" {{ url("api/vuelos") }}"> Mostrar</a>
+        <a href=" {{ url("api/vuelos/8") }}"> Mostrar</a>
+        <form action="{{ url("api/vuelos/22")}}" method="post">
             @csrf
             @method("delete")
             <button type="submit"> Enviar</button>

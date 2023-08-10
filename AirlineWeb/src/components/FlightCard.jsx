@@ -9,7 +9,7 @@ export default function FlightCard() {
     }, []);
 
     const fetchFlights = () =>{
-        fetch("http://127.0.0.1:8000/vuelos" ,{
+        fetch("http://127.0.0.1:8000/api/vuelos" ,{
             method: 'GET',
             mode: "cors",
             credentials: "include"
@@ -20,7 +20,7 @@ export default function FlightCard() {
     }
 
     const handleDelete = (flightId) =>{
-        fetch(`http://127.0.0.1:8000/vuelos/${flightId}`, {
+        fetch(`http://127.0.0.1:8000/api/vuelos/${flightId}`, {
             method: "DELETE",
             mode: "cors",
             credentials: "include"
