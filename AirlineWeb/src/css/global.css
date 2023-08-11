@@ -6,9 +6,9 @@
 }
 
 .grid-container{
-    margin-top: 1rem;
-    gap: 0.5rem;
-    grid-template-columns: repeat(3, 1fr);
+    margin-top: 0.5rem;
     display: grid;
-    padding: 1rem;
+    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0.8rem;
 }
