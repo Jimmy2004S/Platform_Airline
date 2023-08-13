@@ -1,14 +1,13 @@
 header{
     background-color: cornflowerblue;
     color: #fff;
-    display: flex;
-    justify-content: space-between;
     padding: 1.5rem;
     margin-bottom: 2rem;
 }
 
 .btn-add{
     width: 100px;
+    margin-left: 0.8rem;
     border: none;
     border-radius: 0.3rem;
     background-color:seagreen;

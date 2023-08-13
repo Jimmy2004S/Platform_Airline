@@ -37,6 +37,8 @@ class VuelosController extends Controller
         $vuelo -> picture = $request -> picture;
 
         $vuelo -> save();
+
+        return $request->all();
     }
 
 
