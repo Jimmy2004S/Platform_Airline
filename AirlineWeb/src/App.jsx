@@ -2,7 +2,7 @@ import Header from "./components/Header";
 import FlightCard from "./components/FlightCard";
 import "./css/global.css";
 import { useState } from "react";
-import { FormAddFlight } from "./components/Form";
+import {FormAddFlight} from "./components/Form";
 
 function App() {
   const [showForm, setshowForm] = useState(false);

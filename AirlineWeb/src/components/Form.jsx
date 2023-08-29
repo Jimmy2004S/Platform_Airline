@@ -1,5 +1,6 @@
 import "../css/formulario.css";
 import { useState } from "react";
+
 export const FormAddFlight = ({ onClose }) => {
   const [flightData, setFlightData] = useState({
     fecha: "",
@@ -85,3 +86,4 @@ export const FormAddFlight = ({ onClose }) => {
     </form>
   );
 };
+
