@@ -24,6 +24,7 @@ export const FormEdit = ({onClose, flightData}) => {
           .catch((error) => {
             console.error("El error es: ", error);
           });
+          onClose();
       };
   return (
     <form onSubmit={handleEditFlight}>

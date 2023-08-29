@@ -33,6 +33,8 @@ export const FormAddFlight = ({ onClose }) => {
       .catch((error) => {
         console.error("El error es: ", error);
       });
+
+      onClose();
   };
 
   return (
